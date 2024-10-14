@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f0f2;
+  margin: 0;
+}
+
+.bubble-button {
+  
+  --c: #3e0d49;
+  padding: 15px 45px;
+  border-radius: 8px;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fc0a7e;
+  font-weight: bold;
+  outline: none;
+  display: inline-block;
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.bubble-button .bubble {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.bubble-button:hover .bubble {
+  transform: translateY(0) scale(2);
+}
+
+.bubble-button .bubble:nth-child(2) {
+  left: 0%;
+  transition-delay: 0s;
+}
+.bubble-button .bubble:nth-child(3) {
+  left: 25%;
+  transition-delay: 0.1s;
+}
+.bubble-button .bubble:nth-child(4) {
+  left: 50%;
+  transition-delay: 0.2s;
+}
+.bubble-button .bubble:nth-child(5) {
+  left: 75%;
+  transition-delay: 0.3s;
+}
